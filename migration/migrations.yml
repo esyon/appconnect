@@ -1,0 +1,4 @@
+name: AppLogin module migration (esy/appconnect)
+migrations_namespace: Esyon\AppConnect\Migrations
+table_name: oxmigrations_appconnect
+migrations_directory: data

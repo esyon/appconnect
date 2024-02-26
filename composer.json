@@ -1,0 +1,22 @@
+{
+  "name": "esyon/appconnect",
+  "description": "This module serves different endpoints for the mobile app.",
+  "type": "oxideshop-module",
+  "keywords": ["oxid", "modules", "eShop", "esyon", "mobile", "app"],
+  "homepage": "https://www.esyon.de",
+  "version": "1.0.0",
+  "license": [
+    "GPL-3.0-only",
+    "proprietary"
+  ],
+  "extra": {
+    "oxideshop": {
+      "target-directory": "esy/appconnect"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Esyon\\AppConnect\\": "../../../source/modules/esy/appconnect"
+    }
+  }
+}
