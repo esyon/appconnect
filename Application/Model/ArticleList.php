@@ -22,9 +22,10 @@ namespace Esyon\AppConnect\Application\Model;
 class ArticleList extends ArticleList_parent
 {
     /**
-     * Loads articles by EAN
+     * Loads articles by EAN number.
      *
      * @param string $ean
+     *
      * @return void
      */
     public function loadArticlesByEan(string $ean): void

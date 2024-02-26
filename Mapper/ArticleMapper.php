@@ -24,6 +24,8 @@ use OxidEsales\Eshop\Application\Model\ArticleList;
 class ArticleMapper
 {
     /**
+     * Transforms ArticleList to array.
+     *
      * @param ArticleList $articleList
      * @return array
      */

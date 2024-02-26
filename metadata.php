@@ -41,10 +41,7 @@ $aModule = [
         'appscanner' => ScannerController::class,
         'applogin' => AppLogin::class,
     ],
-    'templates' => [
-        'app_warning_not_available.tpl' => 'esy/appconnect/views/tpl/custom/app_warning_not_available.tpl',
-        'app_warning_outdated.tpl' => 'esy/appconnect/views/tpl/custom/app_warning_outdated.tpl'
-    ],
+    'templates' => [],
     'blocks' => [
         [
             'template' => 'layout/base.tpl',

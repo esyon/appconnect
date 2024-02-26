@@ -7,8 +7,8 @@
  *
  * @copyright      (C) ESYON GmbH
  * @since              Version 1.0
- * @author             Alexander Hirschfeld <support@esyon.de>
- * @link               http://www.esyon.de
+ * @author             Albert Feka <support@esyon.de>
+ * @link               https://www.esyon.de
  */
 
 $aLang = [

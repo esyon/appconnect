@@ -26,9 +26,10 @@ use OxidEsales\Eshop\Core\Registry;
 class ViewConfig extends ViewConfig_parent
 {
     /**
-     * returns user token and stores it to user
+     * Get user token and save it in user.
      *
      * @return mixed|string
+     *
      * @throws Exception
      */
     public function getUserToken(): mixed
@@ -48,7 +49,10 @@ class ViewConfig extends ViewConfig_parent
     }
 
     /**
-     * generates UID
+     * Generates a unique user token.
+     *
+     * @param $userId
+     * @return string
      *
      * @throws Exception
      */
@@ -63,7 +67,9 @@ class ViewConfig extends ViewConfig_parent
     }
 
     /**
-     * determines app access
+     * Check if request is from app, based on user agent.
+     *
+     * @return bool
      */
     public function isAppAccess(): bool
     {
@@ -72,6 +78,8 @@ class ViewConfig extends ViewConfig_parent
     }
 
     /**
+     * Return Cooikies as JSON encoded string.
+     *
      * @return string
      */
     public function getCookies(): string

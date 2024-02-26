@@ -31,7 +31,7 @@ use Psr\Container\NotFoundExceptionInterface;
 class AppLogin extends FrontendController
 {
     /**
-     * redirect on error
+     * Handle user login abort.
      */
     private function abortLogin(bool $deleteToken = false): void
     {
@@ -50,7 +50,7 @@ class AppLogin extends FrontendController
     }
 
     /**
-     * interactive user login
+     * Interactive user login.
      *
      * @return string|null
      *
@@ -104,7 +104,7 @@ class AppLogin extends FrontendController
     }
 
     /**
-     * loads user by token
+     * Load user by id.
      *
      * @param string $userId
      *
@@ -137,7 +137,7 @@ class AppLogin extends FrontendController
     }
 
     /**
-     * Download media files in App
+     * Download media files in App.
      *
      * @return void
      */

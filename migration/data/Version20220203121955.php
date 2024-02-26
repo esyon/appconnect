@@ -23,16 +23,27 @@ use Doctrine\Migrations\AbstractMigration;
  */
 final class Version20220203121955 extends AbstractMigration
 {
+    /**
+     * @return string
+     */
     public function getDescription(): string
     {
-        return 'adds field for app token';
+        return 'Adds auth token field for app login to the user table.';
     }
 
+    /**
+     * @param Schema $schema
+     * @return void
+     */
     public function up(Schema $schema): void
     {
         $this->addSql("ALTER TABLE `oxuser` ADD `ESY_APPTOKEN` VARCHAR(250) NOT NULL DEFAULT '';");
     }
 
+    /**
+     * @param Schema $schema
+     * @return void
+     */
     public function down(Schema $schema): void
     {
         $this->addSql("ALTER TABLE `oxuser` DROP COLUMN `ESY_APPTOKEN`;");
