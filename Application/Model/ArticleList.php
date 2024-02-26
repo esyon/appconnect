@@ -16,8 +16,8 @@ declare(strict_types=1);
 namespace Esyon\AppConnect\Application\Model;
 
 /**
- * Class ArticleList
  * @package Esyon\AppConnect\Model
+ * Class ArticleList
  */
 class ArticleList extends ArticleList_parent
 {

@@ -1,0 +1,5 @@
+services:
+  Esyon\AppConnect\Services\Http\HTTPServiceInterface:
+    class: Esyon\AppConnect\Services\Http\HTTPService
+    autowire: true
+    public: true

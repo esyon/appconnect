@@ -20,8 +20,8 @@ use OxidEsales\Eshop\Core\Field;
 use OxidEsales\Eshop\Core\Registry;
 
 /**
- * Class ViewConfig
  * @package Esyon\AppConnect\Core
+ * Class ViewConfig
  */
 class ViewConfig extends ViewConfig_parent
 {

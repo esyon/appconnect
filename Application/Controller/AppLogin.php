@@ -25,8 +25,8 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 
 /**
- * Class AppConnect
  * @package Esyon\AppConnect\Application\Controller
+ * Class AppConnect
  */
 class AppLogin extends FrontendController
 {

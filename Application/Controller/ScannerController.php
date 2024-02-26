@@ -16,14 +16,14 @@ declare(strict_types=1);
 namespace Esyon\AppConnect\Application\Controller;
 
 use Esyon\AppConnect\Mapper\ArticleMapper;
-use Esyon\Services\Http\HTTPService;
-use Esyon\Services\Http\HTTPServiceInterface;
+use Esyon\AppConnect\Services\Http\HTTPService;
+use Esyon\AppConnect\Services\Http\HTTPServiceInterface;
 use OxidEsales\Eshop\Application\Model\ArticleList;
 use OxidEsales\Eshop\Core\Controller\BaseController;
 
 /**
- * Class ScannerController
  * @package Esyon\AppConnect\Controller\ScannerController
+ * Class ScannerController
  */
 class ScannerController extends BaseController
 {

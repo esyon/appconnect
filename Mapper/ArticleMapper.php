@@ -18,8 +18,8 @@ namespace Esyon\AppConnect\Mapper;
 use OxidEsales\Eshop\Application\Model\ArticleList;
 
 /**
- * Class ArticleMapper
  * @package Esyon\AppConnect\Mapper
+ * Class ArticleMapper
  */
 class ArticleMapper
 {
