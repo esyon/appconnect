@@ -1,10 +1,6 @@
 ## About AppConnect
 AppConnect is a module for OXID eSales that enables app connection to the Shop.
 
-```
-This module is intended to be used on non production stages!
-```
-
 ### Installation
 ```
 composer require esyon/appconnect
