@@ -13,10 +13,11 @@
 
 declare(strict_types=1);
 
-namespace Esyon\AppConnect\Controller;
+namespace Esyon\AppConnect\Application\Controller;
 
 use Esyon\AppConnect\Mapper\ArticleMapper;
 use Esyon\Services\Http\HTTPService;
+use Esyon\Services\Http\HTTPServiceInterface;
 use OxidEsales\Eshop\Application\Model\ArticleList;
 use OxidEsales\Eshop\Core\Controller\BaseController;
 
@@ -26,23 +27,22 @@ use OxidEsales\Eshop\Core\Controller\BaseController;
  */
 class ScannerController extends BaseController
 {
-
     /**
-     * @var
+     * HTTPServiceInterface
      */
-    protected $httpService;
+    protected HTTPServiceInterface $httpService;
 
     /**
      * Current class name
      *
      * @var string
      */
-    protected $_sClassName = 'esyappscanner';
+    protected string $_sClassName = 'esyappscanner'; // phpcs:ignore PSR2.Classes.PropertyDeclaration
 
     /**
      * @return void
      */
-    public function scanProduct()
+    public function scanProduct(): void
     {
         $ean = $this->getHttpSevice()->getRequestData('ean');
         $articleList = oxNew(ArticleList::class);

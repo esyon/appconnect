@@ -15,7 +15,4 @@ $aLang = [
     'charset' => 'UTF-8',
     'SHOP_MODULE_GROUP_generalSettings' => 'Einstellungen',
     'SHOP_MODULE_userAgent' => 'User-Agent',
-    'SHOP_MODULE_appIsLive' => 'App ist live',
-    'SHOP_MODULE_linkToAppStore' => 'Link zum App-Store (iOS)',
-    'SHOP_MODULE_linkToPlayStore' => 'Link zum Play-Store (Android)',
 ];

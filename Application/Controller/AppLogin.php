@@ -8,16 +8,21 @@
  * @copyright      (C) ESYON GmbH
  * @since              Version 1.0
  * @author             Albert Feka <support@esyon.de>
- * @link               http://www.esyon.de
+ * @link               https://www.esyon.de
  */
+
+declare(strict_types=1);
 
 namespace Esyon\AppConnect\Application\Controller;
 
+use Exception;
 use OxidEsales\Eshop\Application\Controller\FrontendController;
 use OxidEsales\Eshop\Application\Model\User;
 use OxidEsales\Eshop\Core\Registry;
 use OxidEsales\EshopCommunity\Internal\Container\ContainerFactory;
 use OxidEsales\EshopCommunity\Internal\Framework\Database\QueryBuilderFactoryInterface;
+use Psr\Container\ContainerExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 /**
  * Class AppConnect
@@ -25,7 +30,6 @@ use OxidEsales\EshopCommunity\Internal\Framework\Database\QueryBuilderFactoryInt
  */
 class AppLogin extends FrontendController
 {
-
     /**
      * redirect on error
      */
@@ -49,15 +53,20 @@ class AppLogin extends FrontendController
      * interactive user login
      *
      * @return string|null
+     *
+     * @throws NotFoundExceptionInterface
+     * @throws ContainerExceptionInterface
+     * @throws Exception
      */
-    public function interactiveLogin(): null|string
+    public function interactiveLogin(): string|null
     {
         $oUser = $this->getUser();
 
         // abort interactive login if user is set already
         if ($oUser !== false) {
             Registry::getUtils()->redirect(
-                Registry::getConfig()->getShopHomeURL() . 'cl=start', false
+                Registry::getConfig()->getShopHomeURL() . 'cl=start',
+                false
             );
         }
 
@@ -98,6 +107,7 @@ class AppLogin extends FrontendController
      * loads user by token
      *
      * @param string $userId
+     *
      * @return bool
      */
     private function loadUser(string $userId): bool
@@ -128,6 +138,7 @@ class AppLogin extends FrontendController
 
     /**
      * Download media files in App
+     *
      * @return void
      */
     public function downloadMedia(): void
@@ -141,6 +152,7 @@ class AppLogin extends FrontendController
             header('filename: Oxid_' . basename($mediaLink));
             header('Content-Disposition: attachment; filename="Oxid_' . basename($mediaLink) . '"');
             readfile($file);
+
             exit();
         }
     }

@@ -8,7 +8,7 @@
  * @copyright      (C) ESYON GmbH
  * @since              Version 1.0
  * @author             Albert Feka <support@esyon.de>
- * @link               http://www.esyon.de
+ * @link               https://www.esyon.de
  */
 
 declare(strict_types=1);
