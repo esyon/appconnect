@@ -9,6 +9,9 @@
     "GPL-3.0-only",
     "proprietary"
   ],
+  "require": {
+    "php": ">=8.0"
+  },
   "extra": {
     "oxideshop": {
       "target-directory": "esy/appconnect"
