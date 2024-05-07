@@ -31,8 +31,7 @@ class ArticleList extends ArticleList_parent
     public function loadArticlesByEan(string $ean): void
     {
         $this->selectString(
-            "
-            SELECT * FROM {$this->getBaseObject()->getViewName()} WHERE `oxean` = :oxean OR `oxartnum` = :oxean",
+            "SELECT * FROM {$this->getBaseObject()->getViewName()} WHERE `oxean` = :oxean OR `oxartnum` = :oxean",
             ['oxean' => $ean]
         );
     }
